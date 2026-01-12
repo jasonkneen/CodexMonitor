@@ -25,7 +25,7 @@ function formatPayload(payload: unknown) {
 export function DebugPanel({
   entries,
   isOpen,
-  onToggle,
+  onToggle: _onToggle,
   onClear,
   onCopy,
 }: DebugPanelProps) {

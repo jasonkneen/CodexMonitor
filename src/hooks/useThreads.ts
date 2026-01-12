@@ -635,8 +635,8 @@ function isReviewingFromThread(thread: Record<string, unknown>) {
   let reviewing = false;
   turns.forEach((turn) => {
     const turnItems = Array.isArray((turn as any)?.items) ? (turn as any).items : [];
-    turnItems.forEach((item) => {
-      const type = asString((item as Record<string, unknown>)?.type ?? "");
+    turnItems.forEach((item: Record<string, unknown>) => {
+      const type = asString(item?.type ?? "");
       if (type === "enteredReviewMode") {
         reviewing = true;
       } else if (type === "exitedReviewMode") {
